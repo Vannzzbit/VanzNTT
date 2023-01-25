@@ -183,7 +183,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 ` *ᴠᴀɴᴢʙᴏᴛ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴡʜᴀᴛꜱᴀᴘᴘꜱ*
 
 ${wish()} ${name}
-`, text.trim(), `https://telegra.ph/file/cea5869a97495c3220fdd.jpg`, [
+`, text.trim(), `https://telegra.ph/file/b2d8e2435068d3a5fa7ac.jpg`, [
       [`ꜱᴇᴡᴀ ʙᴏᴛ [ʙᴇʀɢᴀʀᴀɴꜱɪ]`, `${usedPrefix}sewabot`],
       [`۪۪ᴋɪʀɪᴍ ᴘᴇꜱᴀɴ ʀᴀʜᴀꜱɪᴀ`, `${usedPrefix}menfess`]
     ], m, {asLocation: false})
