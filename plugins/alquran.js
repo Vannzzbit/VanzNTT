@@ -29,7 +29,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
     if (!text) throw `Contoh:\n${usedPrefix + command} 1\n\nMaka hasilnya adalah surah Al-Fatihah ayat beserta audionya, dan ayatnya 1 aja`
-    let f = await fetch(`https://api.alquran.cloud/v1/surah/${text}/ar.alafasy`)
+    let f = await fetch(`https://api.zeeoneofc.xyz/api/islam/alquran-audio2?surah=1&ayat=2&apikey=9z9W4vyK`)
         let xx = await f.json()
         let str = xx.data.ayahs.map((v, index) => {
         return `${1 + index}. *${v.text}*
