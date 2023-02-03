@@ -8,7 +8,7 @@ if (!mime) throw 'Reply Gambar nya'
 let media = await q.download()
 let url = await uploadImage(media)
 m.reply('Wait sabar lagi loading...')
-await conn.sendFile(m.chat, await (await fetch(`https://luciaximena.site/api/other/toanime?url=${url}&apikey=YOURAPIKEY`)).buffer(), 'anime.jpg', 'Ciee Jadi Anime :v', m)
+await conn.sendFile(m.chat, await (await fetch(`https://api.zahwazein.xyz/photoeditor/jadianime?url=${url}&apikey=6aa8e658bd31`)).buffer(), 'anime.jpg', 'Ciee Jadi Anime :v', m)
 }
 handler.help = ['jadianime']
 handler.tags = ['convert']
