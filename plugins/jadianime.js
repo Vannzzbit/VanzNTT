@@ -19,3 +19,4 @@ handler.command = /^(jadianime)$/i
 handler.limit = 1
 
 export default handler
+
