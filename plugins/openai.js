@@ -1,8 +1,29 @@
+/*
+import fetch from 'node-fetch'
+let handler = async (m, {
+ text, 
+ usedPrefix, 
+ command
+ }) => {
+    if (!text) throw `Contoh:\n${usedPrefix + command} Apa itu OpenAI`
+let res = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${global.lolkey}&text=${text}&user=user-unique-id`)
+if (!res.ok) throw eror
+        let json = await res.json()
+        await m.reply(`${json.result}`)
+        return !0
+}
+handler.help = ['ai <pertanyaan>']
+handler.tags = ['main']
+handler.command = /^(ai)$/i
+handler.limit = false
+handler.register = true
+export default handler
+*/
 import { Configuration, OpenAIApi } from "openai";
-let handler = async (m, { conn, text }) => {
-if (!text) throw "[!] Masukkan teks."
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+if (!text) throw `Contoh:\n${usedPrefix + command} Apa itu OpenAI`
 const configuration = new Configuration({
-    apiKey: "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"
+    apiKey: "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" //api key bisa didapatkan dari https://openai.com/api/
 });
 const openai = new OpenAIApi(configuration);
         const response = await openai.createCompletion({
@@ -16,7 +37,10 @@ const openai = new OpenAIApi(configuration);
         });
             m.reply(response.data.choices[0].text)
     }
-handler.help = ['ai', 'openai']
-handler.tags = ['info', 'fun']
-handler.command = /^(ai|openai)$/i
+handler.help = ['ai <pertanyaan>']
+handler.tags = ['ai']
+handler.command = /^(ai)$/i
+handler.limit = false
+handler.register = true
+
 export default handler
