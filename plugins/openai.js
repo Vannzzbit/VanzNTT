@@ -6,7 +6,7 @@ import fs from 'fs'
 let handler = async (m, { conn, text }) => {
 if (!text) throw "Hay adakah yang bisa saya bantu??"
 const configuration = new Configuration({
-    apiKey: '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'
+    apiKey: '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'
 });
 const openai = new OpenAIApi(configuration);
         const response = await openai.createCompletion({
@@ -21,6 +21,6 @@ const openai = new OpenAIApi(configuration);
 m.reply(response.data.choices[0].text)
     }
 handler.help = ['openai']
-handler.tags = ['fun']
+handler.tags = ['Tool']
  handler.command = /^(yus|ai|openai)$/i
 export default handler
